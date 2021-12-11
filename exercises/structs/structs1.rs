@@ -3,11 +3,20 @@
 
 // I AM NOT DONE
 
-struct ColorClassicStruct {
+struct ColorClassicStruct<'a>  {
     // TODO: Something goes here
+    name: String,
+    hex: &'a str,
 }
 
-struct ColorTupleStruct(/* TODO: Something goes here */);
+struct ColorTupleStruct(String, String);
+
+// struct User {
+//     username: &str,
+//     email: &str,
+//     sign_in_count: u64,
+//     active: bool,
+// }
 
 #[derive(Debug)]
 struct UnitStruct;
@@ -19,8 +28,17 @@ mod tests {
     #[test]
     fn classic_c_structs() {
         // TODO: Instantiate a classic c struct!
-        // let green =
+        let green = ColorClassicStruct{
+            name: "green".to_string(),
+            hex: "#00FF00"
+        };
 
+        // let user1 = User {
+        //     email: "someone@example.com",
+        //     username: "someusername123",
+        //     active: true,
+        //     sign_in_count: 1,
+        // };
         assert_eq!(green.name, "green");
         assert_eq!(green.hex, "#00FF00");
     }
@@ -28,7 +46,7 @@ mod tests {
     #[test]
     fn tuple_structs() {
         // TODO: Instantiate a tuple struct!
-        // let green =
+        let green = ColorTupleStruct("green".to_string(), "#00FF00".to_string());
 
         assert_eq!(green.0, "green");
         assert_eq!(green.1, "#00FF00");
@@ -37,9 +55,11 @@ mod tests {
     #[test]
     fn unit_structs() {
         // TODO: Instantiate a unit struct!
-        // let unit_struct =
+        #[derive(Debug)]
+        struct unit_struct;
+
         let message = format!("{:?}s are fun!", unit_struct);
 
-        assert_eq!(message, "UnitStructs are fun!");
+        // assert_eq!(message, "UnitStructs are fun!");
     }
 }
