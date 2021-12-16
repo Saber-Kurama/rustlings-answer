@@ -1,14 +1,13 @@
 /*
  * @Author: saber
  * @Date: 2021-12-09 18:53:43
- * @LastEditTime: 2021-12-13 10:18:06
+ * @LastEditTime: 2021-12-16 20:47:13
  * @LastEditors: saber
  * @Description: 
  */
 // structs1.rs
 // Address all the TODOs to make the tests pass!
 
-// I AM NOT DONE
 
 struct ColorClassicStruct<'a>  {
     // TODO: Something goes here
