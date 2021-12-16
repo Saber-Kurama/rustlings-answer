@@ -1,3 +1,10 @@
+/*
+ * @Author: saber
+ * @Date: 2021-12-09 18:53:43
+ * @LastEditTime: 2021-12-16 21:48:53
+ * @LastEditors: saber
+ * @Description: 
+ */
 // enums3.rs
 // Address all the TODOs to make the tests pass!
 
@@ -37,6 +44,9 @@ impl State {
 
     fn process(&mut self, message: Message) {
         // TODO: create a match expression to process the different message variants
+        // match message {
+        //     Message::ChangeColor
+        // }
     }
 }
 
